@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo</title>
+</head>
+<body>
+  <form onsubmit="return false;">
+    <input type="text">
+    <button>Add</button>
+  </form>
+  <ul>
+
+  </ul>
+  <script>
+    const todo= document.querySelector('input')
+    const btn=document.querySelector('button')
+    const ul=document.querySelector('ul')
+    btn.addEventListener('click',() => {
+      if (todo.value) {
+      const li=document.createElement('li')
+      li.innerText = todo.value
+      ul.appendChild(li)
+      todo.value=''
+      
+    }
+    else {
+      alert('데이터를 입력해주세요.')
+    }
+    })
+    
+  </script>
+</body>
+</html>
